@@ -88,11 +88,15 @@ export function App() {
 
 const AnimatedParagraph = ({ children }: PropsWithChildren) => {
   const ref = useRef<HTMLParagraphElement>(null);
+  /**
+   * This is an example of useEffect without dependencies - it will run on every render
+   */
   useEffect(() => {
     if (ref.current) {
       ref.current.animate(
         [
-          { transform: "scale(0)", opacity: 0 },
+          { transform: "scale(0.5)", opacity: 1 },
+          { transform: "scale(1.5)", opacity: 1 },
           { transform: "scale(1)", opacity: 1 },
         ],
         {
