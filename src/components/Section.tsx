@@ -1,8 +1,8 @@
-import { PropsWithChildren } from "preact/compat";
+import { PropsWithChildren, memo } from "preact/compat";
 
-export const Section = ({
+export const Section = memo(function Section({
   children,
   grid = false,
-}: PropsWithChildren<{ grid?: boolean }>) => {
+}: PropsWithChildren<{ grid?: boolean }>) {
   return <section className={grid && "grid"}>{children}</section>;
-};
+});
