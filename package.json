@@ -1,23 +1,36 @@
 {
-	"private": true,
-	"type": "module",
-	"scripts": {
-		"dev": "vite",
-		"build": "vite build",
-		"preview": "vite preview"
-	},
-	"dependencies": {
-		"@preact/signals": "^1.2.2",
-		"preact": "^10.19.5"
-	},
-	"devDependencies": {
-		"@preact/preset-vite": "^2.5.0",
-		"eslint": "^8.56.0",
-		"eslint-config-preact": "^1.3.0",
-		"typescript": "^5.3.3",
-		"vite": "^4.3.2"
-	},
-	"eslintConfig": {
-		"extends": "preact"
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@preact/signals": "^1.2.2",
+    "preact": "^10.19.5"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.5.0",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "eslint": "^8.56.0",
+    "eslint-config-preact": "^1.3.0",
+    "eslint-config-prettier": "^9.1.0",
+    "typescript": "^5.3.3",
+    "vite": "^4.3.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "preact",
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "eslint-config-prettier"
+    ],
+	"rules": {
+		"@typescript-eslint/no-require-imports": "error",
+		"no-var": "error",
+		"prefer-const": "error",
+		"no-console": "warn"
 	}
+  }
 }
