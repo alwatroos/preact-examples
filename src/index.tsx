@@ -1,16 +1,9 @@
-import { render } from "preact";
-
 import "./style.css";
+import { render } from "preact";
 import {
-  PropsWithChildren,
-  memo,
   useCallback,
-  useEffect,
-  useMemo,
-  useRef,
   useState,
 } from "preact/compat";
-import { useComputed } from "@preact/signals";
 import { generatePrefixedRandomString } from "./utils/generatePrefixedRandomString";
 import { firstSignal, secondSignal } from "./data";
 import { AnimatedParagraph } from "./components/AnimatedParagraph";
